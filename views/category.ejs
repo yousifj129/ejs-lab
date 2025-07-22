@@ -7,16 +7,18 @@
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
-    <%- include('./partials/nav') %> 
+    <%- include('./partials/nav') %>
     <h1><%= items[0].category %></h1>
     <ul>
       <% items.forEach(item => {%>
-      <li>Item name: <%= item.name %><br>
-      price: <%= item.price %><br>
-    rating: <%= item.rating %><br>
-      Details: <%= item.details %></li>
+      <li>
+        Item name: <%= item.name %><br />
+        price: <%= item.price %><br />
+        rating: <%= item.rating %><br />
+        Details: <%= item.details %>
+      </li>
 
-      <%   }); %>
+      <% }); %>
     </ul>
   </body>
 </html>

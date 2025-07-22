@@ -10,8 +10,29 @@
     <%- include('./partials/nav') %>
 
     <h1>Full Menu</h1>
+    <h2>Mains</h2>
     <ul>
-      <% menu.forEach(item => {%>
+      <% menu.filter((elem)=> {return elem.category == "mains"}).forEach(item => {%>
+      <li>Item name: <%= item.name %><br>
+      price: <%= item.price %><br>
+    rating: <%= item.rating %><br>
+      Details: <%= item.details %></li>
+
+      <%   }); %>
+    </ul>
+    <h2>Desserts</h2>
+        <ul>
+      <% menu.filter((elem)=> {return elem.category == "desserts"}).forEach(item => {%>
+      <li>Item name: <%= item.name %><br>
+      price: <%= item.price %><br>
+    rating: <%= item.rating %><br>
+      Details: <%= item.details %></li>
+
+      <%   }); %>
+    </ul>
+    <h2>Sides</h2>
+        <ul>
+      <% menu.filter((elem)=> {return elem.category == "sides"}).forEach(item => {%>
       <li>Item name: <%= item.name %><br>
       price: <%= item.price %><br>
     rating: <%= item.rating %><br>
